@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard de Inteligência Operacional de OS</title>
+    <meta name="description" content="Dashboard analítico para ordens de serviço com mapeamento heurístico, análise estatística (Z-Score, Pareto), Naive Bayes e simulador What-If de ROI." />
+    <meta property="og:title" content="Dashboard de Inteligência Operacional de OS" />
+    <meta property="og:description" content="Dashboard analítico para ordens de serviço com mapeamento heurístico, análise estatística (Z-Score, Pareto), Naive Bayes e simulador What-If de ROI." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <!-- SheetJS (XLSX) & Plotly.js Core com crossorigin anonymous e tolerância a falhas -->
+    <script>
+      // Suprime notificações de ResizeObserver em loop e erros não-bloqueantes de scripts externos
+      window.addEventListener('error', function (event) {
+        if (event.message === 'Script error.' || (typeof event.message === 'string' && event.message.includes('ResizeObserver'))) {
+          event.stopImmediatePropagation();
+        }
+      });
+    </script>
+    <script src="https://cdn.sheetjs.com/xlsx-0.20.3/package/dist/xlsx.full.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.plot.ly/plotly-2.35.2.min.js" crossorigin="anonymous"></script>
+  </head>
+  <body class="bg-[#0f172a] text-slate-100 antialiased min-h-screen">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

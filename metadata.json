@@ -1,0 +1,6 @@
+{
+  "name": "Dashboard de Inteligência Operacional de OS",
+  "description": "Dashboard analítico para ordens de serviço com mapeamento heurístico, análise estatística (Z-Score, Pareto), Naive Bayes e simulador What-If de ROI.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
